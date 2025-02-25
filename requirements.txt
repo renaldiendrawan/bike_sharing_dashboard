@@ -107,9 +107,9 @@ notebook==7.3.2
 notebook_shim==0.2.4
 Nuitka==2.4.8
 numba==0.60.0
-numpy==1.23.5
-onnxruntime==1.20.1
+numpy==1.26.0
 opencv-contrib-python==4.10.0.84
+onnxruntime==1.20.1
 opencv-python==4.10.0.84
 opencv-python-headless==4.10.0.84
 openpyxl==3.1.5
