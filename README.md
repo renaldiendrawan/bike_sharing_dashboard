@@ -1,20 +1,20 @@
 # Bike Sharing Dashboard
 
-Dashboard ini merupakan proyek analisis data Bike Sharing yang menampilkan visualisasi interaktif menggunakan Streamlit. Proyek ini memanfaatkan data dari file CSV (misalnya `main_data.csv`) dan memberikan insight melalui berbagai grafik dan filter.
+Dashboard ini merupakan proyek analisis data Bike Sharing yang menampilkan visualisasi interaktif menggunakan Streamlit. Proyek ini memanfaatkan data dari file CSV (misalnya `main_data.csv`) untuk menyajikan insight bisnis melalui berbagai grafik dan filter. Visualisasi yang disajikan di dashboard telah disusun secara konsisten dengan analisis di notebook, sehingga audiens dapat dengan mudah memahami temuan dan rekomendasi bisnis.
 
 ## Struktur Proyek
 
 ```
 submission/
 ├── dashboard/
-│   ├── main_data.csv     # Data utama untuk dashboard
-│   ├── dashboard.py      # Script utama dashboard
+│   ├── main_data.csv     # Data utama untuk dashboard (hasil pembersihan dan penggabungan dari day.csv dan hour.csv)
+│   ├── dashboard.py      # Script utama dashboard Streamlit
 ├── data/
-│   ├── day.csv        # Data tambahan (opsional)
-│   ├── hour.csv        # Data tambahan (opsional)
-├── notebook.ipynb        # Notebook eksplorasi data
+│   ├── day.csv           # Data harian (opsional, sumber data asli)
+│   ├── hour.csv          # Data per jam (opsional, sumber data asli)
+├── notebook.ipynb        # Notebook eksplorasi dan analisis data
 ├── README.md             # Panduan menjalankan dashboard
-├── requirements.txt      # Dependency yang dibutuhkan
+├── requirements.txt      # Daftar dependency yang dibutuhkan
 └── url.txt               # (Opsional) Link referensi atau dataset
 ```
 
@@ -56,23 +56,23 @@ streamlit run dashboard/dashboard.py
 ```
 
 *Catatan:*  
-- Pastikan file `dashboard.py` dan `main_data.csv` berada di dalam folder `dashboard`.
-- Jika Anda mengalami error terkait file tidak ditemukan, pastikan path di dalam `dashboard.py` sudah menggunakan path absolut atau menyesuaikan dengan struktur proyek.
+- Pastikan file `dashboard.py` dan `main_data.csv` berada di dalam folder `dashboard`.  
+- Jika terjadi error terkait file tidak ditemukan, pastikan path yang digunakan dalam `dashboard.py` sudah sesuai (menggunakan path absolut atau path relatif yang tepat).
 
 ## Troubleshooting
 
 - **FileNotFoundError:**  
-  Pastikan file `main_data.csv` sudah ada di folder `dashboard`. Jika error muncul, cek juga working directory dengan:
+  Pastikan file `main_data.csv` sudah ada di folder `dashboard`. Untuk memeriksa, jalankan:
   ```python
   import os
   print(os.getcwd())
   print(os.listdir())
   ```
 - **Dependency Error:**  
-  Pastikan semua library yang dibutuhkan telah terinstall sesuai versi yang ditentukan di `requirements.txt`.
+  Pastikan semua library yang dibutuhkan telah terinstall sesuai dengan versi yang ditentukan di `requirements.txt`.
 
 ---
 
-Dengan mengikuti langkah-langkah di atas, Anda seharusnya dapat menjalankan dashboard dan mendapatkan visualisasi data interaktif dengan Streamlit.
+Dengan mengikuti langkah-langkah di atas, Anda seharusnya dapat menjalankan dashboard dan menikmati visualisasi data interaktif yang telah disusun secara konsisten dengan analisis pada notebook.
 
 Happy Coding! 🚀
